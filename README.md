@@ -26,7 +26,7 @@ Directory /src contains all the source code based on JDK 11.
 
   'CBAandCBAplus' is our implementation of CBA(+)
 
-  'Run' calls our algorithms, including constructing HBLL, constructing PLL, and invoking CBA(+)
+  'Run' is the main entrance. It calls our algorithms, including constructing HBLL, constructing PLL, and invoking CBA(+)
 
 ## Getting Started
 
