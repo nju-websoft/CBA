@@ -117,7 +117,7 @@ public class WeightedGraph {
             graphReadIW(directory+"Weightgraph.txt");
         }
         System.out.println("graph read finish");
-        if(!directory.contains("lubm"))
+        if(!directory.contains("LUBM"))
         {
 
             File kwFile=new File(directory+"kwName.txt");

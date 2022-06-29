@@ -95,7 +95,7 @@ public class CBAandCBAplus {
         try{
             ww.readTotal(directory,weightingScheme);
             hl.readLabels(directory,weightingScheme);
-            if(directory.contains("Dbpedia")||directory.contains("LUBM_5M"))
+            if(directory.contains("Dbpedia")||directory.contains("LUBM-5M"))
             {
                 hl.readHLLabels(directory);
             }

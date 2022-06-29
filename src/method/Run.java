@@ -32,7 +32,7 @@ public class Run {
             if(weightingScheme.equals("UW"))
             {
                 WeightedGraph ww=new WeightedGraph();
-                if(directory.contains("Dbpedia")||directory.contains("LUBM_5M"))
+                if(directory.contains("Dbpedia")||directory.contains("LUBM-5M"))
                 {
                     ww.createLabelUW(directory,3);
                 }
@@ -41,7 +41,7 @@ public class Run {
             else if(weightingScheme.equals("IW"))
             {
                 WeightedGraph ww=new WeightedGraph();
-                if(directory.contains("Dbpedia")||directory.contains("LUBM_5M"))
+                if(directory.contains("Dbpedia")||directory.contains("LUBM-5M"))
                 {
                     ww.createLabelIW(directory,3);
                 }
