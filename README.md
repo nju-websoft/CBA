@@ -16,7 +16,7 @@ Directory /src contains all the source code based on JDK 11.
 
   'Pruned_HBLL' constructs pruned HBLL
 
-  'PLL' constructs PLL for DBpedia and LUBM-5M
+  'PLL' constructs PLL (only for DBpedia and LUBM-5M in the experiments)
 
 - Directory /src/method contains our implementation of CBA(+)
 
