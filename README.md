@@ -10,23 +10,23 @@ This is the source code of the paper 'Keyword-Based Knowledge Graph Exploration 
 
 Directory /src contains all the source code based on JDK 11.
 
-- Directory /src/HBLL includes some classes to build pruned HBLL and read data
+- Directory /src/HBLL contains our implementation of importing graph data and constructing pruned HBLL
 
-  'WeightedGraph' is used to read data from files
+  'WeightedGraph' reads data from files
 
-  'Pruned_HBLL' is used to construct pruned HBLL
+  'Pruned_HBLL' constructs pruned HBLL
 
-  'PLL' is our implementation of PLL to build Hub Label used in CBA/CBA+ on Dbpedia and LUBM-5M 
+  'PLL' constructs PLL for DBpedia and LUBM-5M
 
-- Directory /src/method contains our implementation of algorithms CBA and CBA+
+- Directory /src/method contains our implementation of CBA(+)
 
-  'CertificateSearch' is implementation of OptKVC and OptKVC+
+  'CertificateSearch' is our implementation of OptKVC(+)
 
-  'GreedyGST' is used to build trees from multiset and certificate
+  'GreedyGST' constructs an answer from a multiset of keyword vertices and a certificate returned by OptKVC(+)
 
-  'CBAandCBAplus' is used to generate answers of CBA/CBA+
+  'CBAandCBAplus' is our implementation of CBA(+)
 
-  'Run' is used to call our algorithms, including PLL, HBLL, CBA and CBA+
+  'Run' calls our algorithms, including constructing HBLL, constructing PLL, and invoking CBA(+)
 
 ## Getting Started
 
