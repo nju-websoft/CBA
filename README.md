@@ -45,7 +45,7 @@ javac method/Run.java
 
 #### KGs and Queries
 
-Our data is available from [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6778095.svg)](https://doi.org/10.5281/zenodo.6778095).
+Our data is available from [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6778095.svg)](https://doi.org/10.5281/zenodo.6778095)
 
 Unzip all zip files in the directory CBA-main/src/resource.
 
