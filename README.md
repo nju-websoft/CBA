@@ -45,9 +45,9 @@ javac method/Run.java
 
 #### KGs and Queries
 
-Our data is available from [Onedrive](https://1drv.ms/u/s!AqIjS5TIQjx8mQwbl7pULHTmUf01?e=PsFcap) or [Baidu Wangpan](https://pan.baidu.com/s/1SSq1uoYgUT-GLQsn6umZ2Q?pwd=qm3u) (password: qm).
+Our data is available from [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6778095.svg)](https://doi.org/10.5281/zenodo.6778095).
 
-Unzip the resource.zip in the directory CBA-main/src.
+Unzip all zip files in the directory CBA-main/src/resource.
 
 Directory CBA-main/src/resource contains all the data used in our experiments, including 5 real KGs (`MONDIAL`, `OpenCyc`, `LinkedMDB`, `YAGO`, and `DBpedia`) and 3 synthetic KGs (`LUBM-50K`, `LUBM-500K`, and `LUBM-5M`).
 
