@@ -47,7 +47,7 @@ javac method/Run.java
 
 Our data is available from [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6778095.svg)](https://doi.org/10.5281/zenodo.6778095)
 
-Unzip all zip files in the directory CBA-main/src/resource.
+Extract all the zip files into the directory CBA-main/src/resource.
 
 Directory CBA-main/src/resource contains all the data used in our experiments, including 5 real KGs (`MONDIAL`, `OpenCyc`, `LinkedMDB`, `YAGO`, and `DBpedia`) and 3 synthetic KGs (`LUBM-50K`, `LUBM-500K`, and `LUBM-5M`).
 
