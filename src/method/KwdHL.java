@@ -182,61 +182,86 @@ public class KwdHL {
                     }
                 }
                 else {
-                    ArrayList<InfoItem> temp = new ArrayList<>(0);
-                    int hopiter1 = 0, hopiter2 = 0;
-                    double minDis = INF;
-                    while (hopiter1 < list[v].size() || hopiter2 < kwdHL.list[v].size()) {
-                        int hop2 = INF;
-                        if (hopiter2 < kwdHL.list[v].size()) {
-                            hop2 = kwdHL.list[v].get(hopiter2).hop;
-                        }
-                        if (hop2 > radiusBound) {
-                            hopiter2 = kwdHL.list[v].size();
-                            hop2 = INF;
-                        }
-                        int hop1 = INF;
-                        if (hopiter1 < list[v].size()) {
-                            hop1 = list[v].get(hopiter1).hop;
-                        }
-                        if (hop1 == INF && hop2 == INF) {
+                    ArrayList<InfoItem> temp=new ArrayList<>(0);
+                    int hopiter1=0,hopiter2=0;
+                    double minDis=INF;
+                    while(hopiter1<list[v].size()&&hopiter2<kwdHL.list[v].size())
+                    {
+                        int hop2=kwdHL.list[v].get(hopiter2).hop;
+                        if(hop2>radiusBound)
+                        {
                             break;
                         }
-                        if (hop1 == hop2) {
-                            double dis1 = list[v].get(hopiter1).dis;
-                            double dis2 = kwdHL.list[v].get(hopiter2).dis;
-                            if (dis1 <= dis2) {
-                                if (dis1 < minDis) {
+                        int hop1=list[v].get(hopiter1).hop;
+                        if(hop1==hop2)
+                        {
+                            double dis1=list[v].get(hopiter1).dis;
+                            double dis2=kwdHL.list[v].get(hopiter2).dis;
+                            if(dis1<=dis2)
+                            {
+                                if(dis1<minDis)
+                                {
                                     temp.add(list[v].get(hopiter1));
-                                    minDis = dis1;
+                                    minDis=dis1;
                                 }
                             }
-                            else {
-                                if (dis2 < minDis) {
-                                    temp.add(new InfoItem(hop2, dis2, kwdHL.list[v].get(hopiter2).origin));
-                                    minDis = dis2;
+                            else
+                            {
+                                if(dis2<minDis)
+                                {
+                                    temp.add(new InfoItem(hop2,dis2,kwdHL.list[v].get(hopiter2).origin));
+                                    minDis=dis2;
                                 }
                             }
-                            hopiter1++;
-                            hopiter2++;
+                            hopiter1++;hopiter2++;
                         }
-                        else if (hop1 < hop2) {
-                            double dis1 = list[v].get(hopiter1).dis;
-                            if (dis1 < minDis) {
+                        else if(hop1<hop2)
+                        {
+                            double dis1=list[v].get(hopiter1).dis;
+                            if(dis1<minDis)
+                            {
                                 temp.add(list[v].get(hopiter1));
-                                minDis = dis1;
+                                minDis=dis1;
                             }
                             hopiter1++;
                         }
-                        else {
-                            double dis2 = kwdHL.list[v].get(hopiter2).dis;
-                            if (dis2 < minDis) {
-                                temp.add(new InfoItem(hop2, dis2, kwdHL.list[v].get(hopiter2).origin));
-                                minDis = dis2;
+                        else
+                        {
+                            double dis2=kwdHL.list[v].get(hopiter2).dis;
+                            if(dis2<minDis)
+                            {
+                                temp.add(new InfoItem(hop2,dis2,kwdHL.list[v].get(hopiter2).origin));
+                                minDis=dis2;
                             }
                             hopiter2++;
                         }
                     }
-                    list[v] = temp;
+                    while(hopiter1<list[v].size())//hopiter2>=kwdHL.list[v].size()
+                    {
+                        double dis1=list[v].get(hopiter1).dis;
+                        if(dis1<minDis)
+                        {
+                            temp.add(list[v].get(hopiter1));
+                            minDis=dis1;
+                        }
+                        hopiter1++;
+                    }
+                    while(hopiter2<kwdHL.list[v].size())//hopiter1>=list[v].size()
+                    {
+                        int hop2=kwdHL.list[v].get(hopiter2).hop;
+                        if(hop2>radiusBound)
+                        {
+                            break;
+                        }
+                        double dis2=kwdHL.list[v].get(hopiter2).dis;
+                        if(dis2<minDis)
+                        {
+                            temp.add(new InfoItem(hop2,dis2,kwdHL.list[v].get(hopiter2).origin));
+                            minDis=dis2;
+                        }
+                        hopiter2++;
+                    }
+                    list[v]=temp;
                 }
             }
         }
